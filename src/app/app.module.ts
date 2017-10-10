@@ -16,13 +16,9 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
-import {
-  MdToolbarModule,
-  MdCardModule,
-  MdListModule,
-  MdGridListModule
-} from '@angular/material';
+
 import 'hammerjs';
+
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -42,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -76,12 +73,9 @@ type StoreType = {
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdListModule,
-    MdGridListModule,
     RouterModule.forRoot(ROUTES, { useHash: false, preloadingStrategy: PreloadAllModules }),
     ApolloModule.forRoot(client),
+
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
@@ -94,59 +88,9 @@ type StoreType = {
 export class AppModule {
 
   constructor(
-    public appRef: ApplicationRef,
-    public appState: AppState
+
   ) { }
 
-  public hmrOnInit(store: StoreType) {
-    if (!store || !store.state) {
-      return;
-    }
-    console.log('HMR store', JSON.stringify(store, null, 2));
-    /**
-     * Set state
-     */
-    this.appState._state = store.state;
-    /**
-     * Set input values
-     */
-    if ('restoreInputValues' in store) {
-      let restoreInputValues = store.restoreInputValues;
-      setTimeout(restoreInputValues);
-    }
 
-    this.appRef.tick();
-    delete store.state;
-    delete store.restoreInputValues;
-  }
-
-  public hmrOnDestroy(store: StoreType) {
-    const cmpLocation = this.appRef.components.map((cmp) => cmp.location.nativeElement);
-    /**
-     * Save state
-     */
-    const state = this.appState._state;
-    store.state = state;
-    /**
-     * Recreate root elements
-     */
-    store.disposeOldHosts = createNewHosts(cmpLocation);
-    /**
-     * Save input values
-     */
-    store.restoreInputValues = createInputTransfer();
-    /**
-     * Remove styles
-     */
-    removeNgStyles();
-  }
-
-  public hmrAfterDestroy(store: StoreType) {
-    /**
-     * Display new elements
-     */
-    store.disposeOldHosts();
-    delete store.disposeOldHosts;
-  }
 
 }
