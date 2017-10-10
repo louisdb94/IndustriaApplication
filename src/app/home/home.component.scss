@@ -14,12 +14,39 @@ md-toolbar-row {
 }
 
 #home {
-  margin:0 auto;
-  display:flex;
-  flex-direction:row-reverse;
+  height: 250px;
+  background-color:whitesmoke;
 }
-#daphne {
-  margin-top:5%;
+#picture {
+  width: 200px;
+}
+#edit {
+  margin-left: 300px;
+  width: 100px;
+}
+
+#resume {
+  margin-right: 50px;
+  width: 100px;
+}
+
+#bio {
+  background-color: white;
+}
+
+#header {
+  margin-top: 2%;
+  margin-left: 50px;
+}
+
+#text {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+}
+
+#skills {
+  background-color: whitesmoke;
 }
 
 .done {
