@@ -4,8 +4,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
-import { PostsService } from './posts/posts.service';
-import '../styles/styles.scss';
+
 
 /**
  * App Component
@@ -19,18 +18,22 @@ import '../styles/styles.scss';
   ],
   template: `
 
-  <nav class="navbar navbar-light bg-faded">
-    <a class="navbar-brand" href="#">
-    <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
-    </a>
-  </nav>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" style="background:grey">
+    <div class="container">
+        <a class="navbar-brand">Angular Router</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+          <li class="nav-item"><a class="nav-link" routerLink="home" routerLinkActive="active">Home</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+
 
       <router-outlet></router-outlet>
     <footer>
     </footer>
-  `,
-  providers: [PostsService]
+  `
 })
 export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/angularclass-avatar.png';
