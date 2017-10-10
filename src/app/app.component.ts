@@ -18,7 +18,7 @@ import { AppState } from './app.service';
   ],
   template: `
 
-  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" style="background:grey">
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" >
     <div class="container">
         <a class="navbar-brand">Angular Router</a>
         <ul class="nav navbar-nav" routerLinkActive="active">

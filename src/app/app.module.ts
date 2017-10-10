@@ -30,7 +30,6 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import '../styles/styles.scss';
