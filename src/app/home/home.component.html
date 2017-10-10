@@ -1,8 +1,59 @@
-<div id="container">
-    <div id="daphne">
-      <p id = "name"> Louis Dal Bosco </p>
-      <p id= "course"> ir master internet computing </p>
-      <img src="../../assets/img/daphne.png">
+
+<div class="container">
+    <div class="row" id="block1">
+      <div class="col">
+        <button type="button" class="btn btn-light" id="edit">edit</button>
+      </div>
+
+      <div class="col" id="profile">
+        <h1 id = "name"> Louis Dal Bosco </h1>
+        <p id= "course"> ir master internet computing </p>
+        <img src="../../assets/img/daphne.png">
+      </div>
+
+      <div class="col">
+        <button type="button" class="btn btn-light" id="viewCv">View full resume</button>
+      </div>
     </div>
+
+    <div class="row" id="block2">
+      <p  class="heading"> Who am I </p>
+      Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+    </div>
+
+    <div class="row" id="block2" >
+      <p class="heading" > Education </p>
+      Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+    </div>
+
+    <div class="row" id="block3" >
+
+        <p class="heading" > Professional skills </p>
+        <div class="skills">
+          Html/Css
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+          </div>
+
+          Javascript
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+          Nodejs
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="block2" >
+      <p class="heading" > Contact </p>
+      <ul>
+        <li > <b>email:</b> {{email}}</li>
+        <li> <b>phone:</b>  {{phone}}</li>
+      </ul>
+    </div>
+
 
 </div>

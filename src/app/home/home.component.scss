@@ -1,24 +1,67 @@
 /*styles for home content only*/
-body {
-  margin: 0;
-
-  font-family: Roboto, sans-serif;
-}
 
 
-
-#daphne{
+#profile{
   text-align: center;
-  
-
 }
 
 #course{
-  font-size: 10px;
+  font-size: 17px;
+  margin-top:-10px;
+  text-align: center;
+
+}
+#block1{
+  margin-top: 20px
+}
+img{
+  width:60%;
+  border:1px solid #bfbfbf;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.heading {
+
+  font-weight: 600;
+  border-bottom: 1px solid;
+  width: 100%;
+  text-transform: uppercase;
 
 }
 
-img{
-  width:15%;
+#block2{
+  padding: 20px;
+}
+#block3{
+  padding: 20px;
 
+}
+
+
+#viewCv{
+    display: inline-block;
+    width: 200px;
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+#edit{
+
+  float:left;
+  margin-left: 20px;
+  cursor:pointer;
+}
+
+#education{
+  padding: 20px;
+}
+
+.skills{
+  width:60%
+}
+.progress{
+  margin-bottom:20px
 }
