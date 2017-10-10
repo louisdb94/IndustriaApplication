@@ -5,6 +5,7 @@ import {
 } from '@angular/core';
 import { AppState } from './app.service';
 import { PostsService } from './posts/posts.service';
+import '../styles/styles.scss';
 
 /**
  * App Component
@@ -14,17 +15,16 @@ import { PostsService } from './posts/posts.service';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.component.scss',
-    '../../node_modules/bootstrap/dist/css/bootstrap.min.css',
+    './app.component.scss'
   ],
   template: `
 
   <nav class="navbar navbar-light bg-faded">
-<a class="navbar-brand" href="#">
-<img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-Bootstrap
-</a>
-</nav>
+    <a class="navbar-brand" href="#">
+    <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+    Bootstrap
+    </a>
+  </nav>
 
       <router-outlet></router-outlet>
     <footer>
