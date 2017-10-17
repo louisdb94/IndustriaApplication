@@ -33,7 +33,12 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
+import { StudentProfile } from './profile-student';
+import { HeaderProfile } from './profile-student/profile-header';
+import { BioProfile } from './profile-student/profile-bio';
+import { EducationProfile } from './profile-student/profile-education';
+import { SkillsProfile } from './profile-student/profile-skills';
+import { FooterProfile } from './profile-student/profile-footer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import '../styles/styles.scss';
@@ -58,7 +63,13 @@ type StoreType = {
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    HomeComponent,
+    StudentProfile,
+    HeaderProfile,
+    BioProfile,
+    EducationProfile,
+    SkillsProfile,
+    FooterProfile,
+    
   ],
   /**
    * Import Angular's modules.
