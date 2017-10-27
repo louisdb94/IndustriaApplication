@@ -1,6 +1,10 @@
 <div class="jumbotron" style="background-color:white">
+    <h2 translate style="margin-bottom : 25px">WhoAmI
+        <button translate *ngIf="!editMode" (click)="editMode = true" style="float: right">Edit</button>
+        <button translate *ngIf="editMode" (click)="save()"style="float: right">Save</button>
+    </h2>
     <div class="row">
-        <h2 class="text-uppercase">Who Am I?</h2>
-        <p>Donec quis nisi mattis, placerat libero vitae, venenatis ex. Fusce varius luctus vehicula. Nullam sit amet congue arcu. Suspendisse facilisis accumsan nibh, et ornare nisi accumsan sit amet. Sed arcu purus, tincidunt nec pellentesque ut, scelerisque eu dui. Maecenas luctus, velit id tincidunt interdum, justo mauris ullamcorper tortor, quis interdum lorem arcu ac sem. Fusce vel mollis sem. Ut interdum urna in tempus finibus. Nam mollis metus lacus, lobortis mollis lorem tempus et. Ut fringilla neque a libero laoreet, in pretium massa ornare. Cras elementum posuere enim eget condimentum. Praesent venenatis vulputate elit nec egestas. Mauris auctor id libero non mollis. Praesent quis lacus auctor, accumsan tortor eu, vulputate libero. Donec venenatis lacus at lorem laoreet, quis ornare tortor vulputate.</p>
+        <textarea *ngIf="editMode" [(ngModel)]="bio" rows="7" cols="400" placeholder="Write a short bio about yourself" (keyup.enter)="save()"></textarea>
+        <p *ngIf="!editMode">{{bio}}</p>
     </div>
 </div>

@@ -12,7 +12,8 @@ function get(req, res) {
 function create(params) {
   const post = new Post({
     title: params.data.title,
-    content: params.data.content
+    // content: params.data.content,
+    random: params.data.random
   });
   return post.save();
 }
@@ -21,7 +22,8 @@ function update(params) {
   return load(params).then(post => {
     const tmp = post;
     post.title = params.data.title;
-    post.content = params.data.content;
+    // post.content = params.data.content;
+    post.random = params.data.random;
     return post.save()
   });
 }

@@ -11,7 +11,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  content: {
+  // content: {
+  //   type: String
+  // },
+  random: {
     type: String
   },
   createdAt: {

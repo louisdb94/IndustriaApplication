@@ -15,9 +15,8 @@ import config from './config';
 import APIError from '../helpers/APIError';
 import path from 'path';
 import appRoot from 'app-root-path';
-import innograph from 'innograph'
+import innograph from '../innograph'
 import postCtrl from '../controllers/post.controller';
-
 
 const app = express();
 
@@ -94,5 +93,6 @@ app.use((err, req, res, next) => // eslint-disable-line no-unused-vars
     stack: config.env === 'development' ? err.stack : {}
   })
 );
+
 
 export default app;
